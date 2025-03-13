@@ -18,37 +18,48 @@ const Layout = ({ children }) => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link text-white" href="#">¿Por qué elegirnos?</a>
+                <a className="nav-link text-white" href="#">
+                  ¿Por qué elegirnos?
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" href="#">Servicios</a>
+                <a className="nav-link text-white" href="#">
+                  Servicios
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" href="#">Sobre nosotros</a>
+                <a className="nav-link text-white" href="#">
+                  Sobre nosotros
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" href="#">FAQ's</a>
+                <a className="nav-link text-white" href="#">
+                  FAQ's
+                </a>
               </li>
             </ul>
           </div>
 
           {/* Redes sociales */}
           <div className="d-flex gap-3">
-            <a href="#" className="text-white"><i className="bi bi-facebook"></i></a>
-            <a href="#" className="text-white"><i className="bi bi-instagram"></i></a>
-            <a href="#" className="text-white"><i className="bi bi-tiktok"></i></a>
-            <a href="#" className="text-white"><i className="bi bi-twitter"></i></a>
+            <a href="#" className="text-white">
+              <i className="bi bi-facebook"></i>
+            </a>
+            <a href="#" className="text-white">
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a href="#" className="text-white">
+              <i className="bi bi-tiktok"></i>
+            </a>
+            <a href="#" className="text-white">
+              <i className="bi bi-twitter"></i>
+            </a>
           </div>
         </div>
       </nav>
 
       {/* Contenido principal */}
       <main className="container my-4">{children}</main>
-
-      {/* Footer */}
-      <footer className="bg-dark text-white text-center py-3">
-        <p className="mb-0">&copy; {new Date().getFullYear()} Mi Sitio Web. Todos los derechos reservados.</p>
-      </footer>
     </div>
   );
 };

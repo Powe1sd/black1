@@ -1,0 +1,36 @@
+.about-section {
+  background: linear-gradient(to right, #000, #1a1a2e);
+}
+
+.about-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 280px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-item i {
+  font-size: 40px;
+  color: #17a2b8;
+}
+
+.about-item:hover {
+  transform: scale(1.05);
+}
+
+/* imagen tamaño de galleri.jsx */
+
+.custom-img {
+  width: 100%; /* Hace que todas las imágenes tengan el mismo ancho */
+  height: 200px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Asegura que la imagen se recorte en lugar de estirarse */
+}

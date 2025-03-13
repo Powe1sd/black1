@@ -1,17 +1,24 @@
 import React from "react";
 import Layout from "./components/Layaut";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import About from "./components/About";
+import Gallery from "./components/Gallery";
+import Specifications from "./components/Specifications";
+import Innovation from "./components/Innovation";
+import "./App.css";
 
 const App = () => {
   return (
-    <Layout>
-      <div className="container text-center mt-5">
-        <h1 className="text-white">Bienvenido a Mi Sitio</h1>
-        <p className="text-light">
-          Explora nuestros servicios y descubre por qué somos tu mejor opción.
-        </p>
-        <button className="btn btn-primary mt-3">Ver más</button>
-      </div>
-    </Layout>
+    <>
+      <Layout />
+      <Features />
+      <Hero />
+      <About />
+      <Gallery />
+      <Specifications />
+      <Innovation />
+    </>
   );
 };
 
