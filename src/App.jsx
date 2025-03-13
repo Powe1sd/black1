@@ -6,6 +6,9 @@ import About from "./components/About";
 import Gallery from "./components/Gallery";
 import Specifications from "./components/Specifications";
 import Innovation from "./components/Innovation";
+import TechFeatures from "./components/TechFeatures";
+import FutureInnovations from "./components/futurein";
+
 import "./App.css";
 
 const App = () => {
@@ -18,6 +21,8 @@ const App = () => {
       <Gallery />
       <Specifications />
       <Innovation />
+      <TechFeatures />
+      <FutureInnovations />
     </>
   );
 };
