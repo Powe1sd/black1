@@ -1,11 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Layout = ({ children }) => {
+  const [isVisible, setIsVisible] = useState(true);
+  let lastScrollY = 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // Si el usuario baja, oculta la navbar
+        setIsVisible(false);
+      } else {
+        // Si el usuario sube, muestra la navbar
+        setIsVisible(true);
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg bg-dark border-bottom">
-        <div className="container">
+      {/* Navbar con efecto de desaparecer al bajar */}
+      <nav
+        className={`navbar navbar-expand-lg bg-dark border-bottom fixed-top transition ${
+          isVisible ? "visible" : "hidden"
+        }`}
+      >
+        <div className="container d-flex justify-content-between align-items-center">
+          {/* Logo o nombre TECH en rojo */}
+          <a className="navbar-brand fw-bold text-danger fs-3" href="#">
+            TECH
+          </a>
+
           <button
             className="navbar-toggler text-white"
             type="button"
@@ -60,6 +91,19 @@ const Layout = ({ children }) => {
 
       {/* Contenido principal */}
       <main className="container my-4">{children}</main>
+
+      {/* Estilos para la transición */}
+      <style jsx>{`
+        .transition {
+          transition: transform 0.3s ease-in-out;
+        }
+        .hidden {
+          transform: translateY(-100%);
+        }
+        .visible {
+          transform: translateY(0);
+        }
+      `}</style>
     </div>
   );
 };

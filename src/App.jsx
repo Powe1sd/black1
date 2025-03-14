@@ -15,7 +15,8 @@ import Exploration from "./components/Exploration";
 import ExternalLink from "./components/ExternalLink";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
-
+import FAQ from "./components/FAQ";
+import InteractiveCards from "./components/InteractiveCards";
 
 import "./App.css";
 
@@ -40,10 +41,12 @@ const App = () => {
 
       <ExternalLink />
       <Testimonials />
+      <FAQ />
 
+      <InteractiveCards />
       {/* Contacto ultima seccion */}
 
-      <Contact/>
+      <Contact />
     </Router>
   );
 };
