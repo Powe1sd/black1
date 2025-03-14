@@ -12,6 +12,11 @@ import FutureInnovations from "./components/futurein";
 import FutureVision from "./components/FutureVision";
 import ExploreMore from "./components/ExploreMore";
 import Exploration from "./components/Exploration";
+import ExternalLink from "./components/ExternalLink";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
+
+
 import "./App.css";
 
 const App = () => {
@@ -32,6 +37,13 @@ const App = () => {
         <Route path="/" element={<ExploreMore />} />
         {<Route path="/exploration" element={<Exploration />} />}
       </Routes>
+
+      <ExternalLink />
+      <Testimonials />
+
+      {/* Contacto ultima seccion */}
+
+      <Contact/>
     </Router>
   );
 };
