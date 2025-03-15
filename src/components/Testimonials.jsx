@@ -21,7 +21,7 @@ const Testimonials = () => {
 
   return (
     <section className="container py-5 text-center">
-      <h2 className="display-4 mb-4">Testimonios</h2>
+      <h2 className="display-4 mb-4">Comentarios</h2>
       <div className="row g-4">
         {reviews.map((review, index) => (
           <div className="col-md-4" key={index}>
